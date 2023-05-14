@@ -19,7 +19,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 	stack_tmp = *stack;
 
 	if ((*stack)->next)
-		*stack = (stack)->next;
+		*stack = (*stack)->next;
 	else
 		*stack = NULL;
 	free(stack_tmp);
