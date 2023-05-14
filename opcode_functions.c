@@ -50,3 +50,25 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	(*stack) = new;
 }
+/**
+ * _pint - print the number on top
+ * @stack: pointer to a stack_t
+ * @line_number: number of line
+ */
+void _pint(stack_t **stack, unsigned int line_number)
+{
+	if (!(*stack))
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+		fclose(file);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
+}
+
+
+
+
+
+
+
