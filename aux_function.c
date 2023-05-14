@@ -11,6 +11,7 @@ void (*get_opcode_function(char *opcode))(stack_t **, unsigned int)
 	instruction_t cases[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 
