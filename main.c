@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		opcode_function = get_opcode_function(opcode);
 		if (!opcode_function)
 		{
-			fprintf(stderr, "L%d: unknow intruction %s\n", line_number, opcode);
+			fprintf(stderr, "L%d: unknown intruction %s\n", line_number, opcode);
 			free_list(stack_head);
 			fclose(file);
 			exit(EXIT_FAILURE);
